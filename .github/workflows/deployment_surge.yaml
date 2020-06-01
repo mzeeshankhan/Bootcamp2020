@@ -1,19 +1,19 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Deployment Website  ## ADD NAME
+name: Deployment Website
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
-    branches: [ master ] ## JAB MASTER BRANCH MA KUCH PUSH HO TO YA YAML FILE RUN KRA
+    branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs: ### 1 job run ho jis ma koi vm machine ya docker container bna
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest ## US system ma ubuntu install ho
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -21,11 +21,11 @@ jobs: ### 1 job run ho jis ma koi vm machine ya docker container bna
     - uses: actions/checkout@v2  ##Code ko lo or action perform kro
 
     # Runs a single command using the runners shell
-    - name: Install NodeJS ## SURGE K LIA NPM INSTALL KIA TH IS LIA IS MA INSTALL KIA
-      uses: actions/setup-node@v2-beta ## node ko chaloa
+    - name: Install NodeJS
+      uses: actions/setup-node@v2-beta
       with: 
         node-version: 12
     - name: Install Surge
       run: npm install -g surge
     - name: Run Surge
-      run: surge ./30-May-20/ poised-secretary.surge.sh --token ${{secrets.SURGE_TOKEN}}/
+      run: surge ./ outrageous-pen.surge.sh --token ${{secrets.SURGE_TOKEN}}/
