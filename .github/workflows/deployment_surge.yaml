@@ -20,7 +20,7 @@ jobs: ### 1 job run ho jis ma koi vm machine ya docker container bna
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2  ##Code ko lo or action perform kro
 
-  # Runs a single command using the runners shell ### YA ACTION KRO
+  # Runs a single command using the runners shell
   - name: Install NodeJS ## SURGE K LIA NPM INSTALL KIA TH IS LIA IS MA INSTALL KIA
     uses: actions/setup-node@v2-beta ## node ko chaloa
     with: 
