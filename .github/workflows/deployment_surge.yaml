@@ -28,4 +28,4 @@ jobs: ### 1 job run ho jis ma koi vm machine ya docker container bna
     - name: Install Surge
       run: npm install -g surge
     - name: Run Surge
-      run: surge ./ poised-secretary.surge.sh --token ${{secret.SURGE_TOKEN}}/
+      run: surge ./ poised-secretary.surge.sh --token ${{secrets.SURGE_TOKEN}}/
